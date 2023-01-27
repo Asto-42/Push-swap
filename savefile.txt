@@ -1,0 +1,19 @@
+# include "push_swap.h"
+#include <stdio.h>
+
+t_list	*swap(t_list *lst)
+{
+	int	tmp;
+
+	if (!(lst -> content))
+		return (lst);
+	else
+		while (lst -> content)
+		{
+			tmp = lst -> content;
+			lst -> content = lst -> next;
+			lst -> next = tmp;
+			//lst = lst -> next;
+		}
+	return (lst);
+}
